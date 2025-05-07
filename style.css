@@ -1,0 +1,133 @@
+body {
+  font-family: "Arial", sans-serif;
+  background: linear-gradient(to bottom right, #4a3f7f, #9d5c87, #e07c7c);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  text-align: center;
+}
+
+.container {
+  max-width: 800px;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 3em;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5em;
+}
+
+p {
+  font-size: 1em;
+  margin-bottom: 2em;
+  line-height: 1.6;
+}
+
+.countdown-timer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hms-row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+.timer-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 10px;
+}
+
+.timer-box > div:not(.label) {
+  display: flex;
+}
+
+.time {
+  background-color: white;
+  color: #333;
+  font-size: 4em;
+  font-weight: bold;
+  padding: 15px 20px;
+  border-radius: 10px;
+  margin: 0 5px;
+  min-width: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.label {
+  font-size: 0.8em;
+  text-transform: uppercase;
+  margin-top: 10px;
+  letter-spacing: 0.1em;
+}
+
+.separator {
+  font-size: 4em;
+  font-weight: bold;
+  color: white;
+  align-self: center;
+  padding-bottom: 35px;
+  margin: 0 5px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5em;
+  }
+  .time {
+    font-size: 3em;
+    padding: 10px 15px;
+    min-width: 45px;
+  }
+  .separator {
+    font-size: 3em;
+    padding-bottom: 25px;
+  }
+  p {
+    font-size: 0.9em;
+  }
+  .label {
+    font-size: 0.7em;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2em;
+  }
+  .countdown-timer {
+  }
+  .timer-box {
+    margin: 0 5px;
+  }
+  .time {
+    font-size: 2em;
+    padding: 8px 10px;
+    min-width: 30px;
+    margin: 0 2px;
+  }
+  .separator {
+    font-size: 2em;
+    padding-bottom: 15px;
+  }
+  .label {
+    font-size: 0.6em;
+  }
+  p {
+    font-size: 0.8em;
+  }
+}
