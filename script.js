@@ -14,6 +14,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let intervalId;
 
+  // Function to update the countdown status message
+  function updateCountdownStatus() {
+    const countdownStatus = document.getElementById('countdown-status');
+    const releaseMessage = document.getElementById('release-message');
+    const now = new Date().getTime();
+
+    // Show the message container
+    releaseMessage.classList.remove('opacity-0');
+
+    if (now >= countDownDate) {
+      countdownStatus.textContent = "The day has arrived!";
+      countdownStatus.classList.add('text-green-500');
+    } else {
+      countdownStatus.textContent = "Not released yet, but getting closer every day :(";
+      countdownStatus.classList.remove('text-green-500');
+    }
+  }
+
   function updateCountdown() {
     const now = new Date().getTime();
     const difference = countDownDate - now;
@@ -30,9 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
       minutesUnitsElement.textContent = '0';
       secondsTensElement.textContent = '0';
       secondsUnitsElement.textContent = '0';
-      // Optionally, display a message
-      // document.querySelector('.container h1').textContent = "WE HAVE ARRIVED!";
-      // document.querySelector('.container p').textContent = "The wait is over.";
+      updateCountdownStatus();
       return;
     }
 
@@ -58,6 +74,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Update seconds
     secondsTensElement.textContent = String(Math.floor(seconds / 10));
     secondsUnitsElement.textContent = String(seconds % 10);
+
+    // Update status message
+    updateCountdownStatus();
   }
 
   // Call it once to display immediately

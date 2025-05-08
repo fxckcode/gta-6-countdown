@@ -3,52 +3,115 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Coming Soon</title>
+    <title>How long until the release of GTA 6? | Grand Theft Auto VI</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="/official-gta-vi-logo.ico" />
   </head>
   <body>
-    <div class="container">
-      <h1>WE ARE COMING SOON</h1>
-      <p>
-        Our website is under construction. We are working hard to give you a
-        better experience.
-      </p>
-      <div class="countdown-timer">
-        <div class="timer-box" id="days-box">
-          <div>
-            <div class="time" id="days-hundreds">0</div>
-            <div class="time" id="days-tens">0</div>
-            <div class="time" id="days-units">0</div>
+    <div class="container mx-auto">
+      <section
+        class="w-full h-screen flex flex-col items-center justify-center"
+      >
+        <div class="max-w-[70vw] mx-auto">
+          <h1 class="title-general">How long until the release of GTA 6?</h1>
+          <div id="release-message" class="text-center mb-4 opacity-0">
+            <p class="text-xl font-bold" id="countdown-status">
+              Loading...
+            </p>
           </div>
-          <span class="label">DAYS</span>
+          <p class="description hidden md:flex w-[70%] mx-auto">
+            Stay tuned for the gaming event of the decade! Grand Theft Auto VI
+            isn't just another game - it's the next evolution in open-world
+            gaming. Experience the neon-lit streets of Vice City like never
+            before, as you follow the explosive story of Lucia and Jason. This
+            isn't just a game release, it's gaming history in the making. The
+            countdown has begun!
+          </p>
+          <p class="description md:hidden">
+            Stay tuned for the gaming event of the decade! Grand Theft Auto VI
+            isn't just another game - it's the next evolution in open-world
+            gaming. The countdown has begun!
+          </p>
         </div>
 
-        <div class="hms-row">
-          <div class="timer-box" id="hours-box">
+        <div class="countdown-timer">
+          <div class="timer-box" id="days-box">
             <div>
-              <div class="time" id="hours-tens">0</div>
-              <div class="time" id="hours-units">0</div>
+              <div class="time" id="days-hundreds">0</div>
+              <div class="time" id="days-tens">0</div>
+              <div class="time" id="days-units">0</div>
             </div>
-            <span class="label">HOURS</span>
+            <span class="label">DAYS</span>
           </div>
-          <div class="separator">:</div>
-          <div class="timer-box" id="minutes-box">
-            <div>
-              <div class="time" id="minutes-tens">0</div>
-              <div class="time" id="minutes-units">0</div>
+
+          <div class="hms-row">
+            <div class="timer-box" id="hours-box">
+              <div>
+                <div class="time" id="hours-tens">0</div>
+                <div class="time" id="hours-units">0</div>
+              </div>
+              <span class="label">HOURS</span>
             </div>
-            <span class="label">MINUTES</span>
-          </div>
-          <div class="separator">:</div>
-          <div class="timer-box" id="seconds-box">
-            <div>
-              <div class="time" id="seconds-tens">0</div>
-              <div class="time" id="seconds-units">0</div>
+            <div class="separator">:</div>
+            <div class="timer-box" id="minutes-box">
+              <div>
+                <div class="time" id="minutes-tens">0</div>
+                <div class="time" id="minutes-units">0</div>
+              </div>
+              <span class="label">MINUTES</span>
             </div>
-            <span class="label">SECONDS</span>
+            <div class="separator">:</div>
+            <div class="timer-box" id="seconds-box">
+              <div>
+                <div class="time" id="seconds-tens">0</div>
+                <div class="time" id="seconds-units">0</div>
+              </div>
+              <span class="label">SECONDS</span>
+            </div>
           </div>
         </div>
-      </div>
+
+        <div class="mt-8">
+          <p class="text-center text-sm">
+            *The countdown is based on the release date of the game.
+          </p>
+        </div>
+
+        <!-- Arrow icon to redirect to the trailer section -->
+        <div class="mt-8 flex flex-col items-center gap-4">
+          <span class="text-center text-sm"
+            >Scroll down to watch the trailer</span
+          >
+          <a href="#trailer-section" class="icon-arrow-down">
+            <img src="/assets/images/down-arrow.png" alt="Arrow down" />
+          </a>
+        </div>
+      </section>
+
+      <section
+        id="trailer-section"
+        class="w-full h-screen flex flex-col items-center justify-center"
+      >
+        <div
+          class="trailer-section"
+          style="margin-top: 40px; text-align: center"
+        >
+          <h2 class="mb-3 text-4xl font-bold mb-8">Latest GTA VI Trailer</h2>
+          <div
+            class="aspect-[9/16] sm:aspect-video w-full md:min-w-[70vw] rounded-xl overflow-hidden"
+          >
+            <iframe
+              src="https://www.youtube.com/embed/VQRLujxTm3c?si=rwn5BgHTCenyNMVs"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+              class="w-full h-full"
+            ></iframe>
+          </div>
+        </div>
+      </section>
     </div>
     <script src="script.js"></script>
   </body>
